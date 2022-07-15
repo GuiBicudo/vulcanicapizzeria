@@ -1,0 +1,312 @@
+body {
+  background-color: #f2eee3;
+  padding-top: 0px;
+}
+
+#menu__toggle {
+  opacity: 0;
+}
+
+#menu__toggle:checked+.menu__btn>span {
+  transform: rotate(45deg);
+}
+
+#menu__toggle:checked+.menu__btn>span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+
+#menu__toggle:checked+.menu__btn>span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#menu__toggle:checked~.menu__box {
+  left: 0 !important;
+}
+
+.menu__btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+  transition-duration: .25s;
+}
+
+.menu__btn>span::before {
+  content: '';
+  top: -8px;
+}
+
+.menu__btn>span::after {
+  content: '';
+  top: 8px;
+}
+
+.menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #ECEFF1;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+  transition-duration: .25s;
+}
+
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+
+
+header {
+  background-color: #b8353a;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  margin-top: 0px;
+
+}
+
+.title {
+  font-size: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+section {
+  padding: 20px;
+  background-image: url(./Assets/pizzanapoletanatabua.jpg);
+  background-size: cover;
+  overflow: hidden;
+  height: 600px;
+}
+
+/*
+.formcontainer {
+  max-width: 230px;
+  background-color: #FFFFFFBB;
+  padding: 20px;
+  float: right;
+
+}
+*/
+
+
+.mb {
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 16px;
+
+}
+
+input,
+select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  color: #f2eee3;
+  background-color: #b8353a;
+  font-weight: bold;
+  cursor: grab;
+}
+
+.description {
+  color: #f2eee3;
+  display: inline-block;
+  max-width: 40%;
+  margin-left: 40px;
+  text-align: left;
+}
+
+.description p,
+.description h3 {
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #202121;
+  padding: 40px;
+  text-align: center;
+}
+
+.description h3 {
+  font-size: 24px;
+}
+
+.pizzapicture {
+  width: 240px;
+  border-radius: 10%;
+}
+
+.profilepicture {
+  width: 240px;
+  border-radius: 10%;
+}
+
+.sitefooter {
+  background-color: #b8353a;
+  text-align: center;
+  padding: 0px;
+  color: #f2eee3;
+  position: relative;
+  padding-bottom: 20px;
+  bottom: 0px;
+
+
+}
+
+.instaimage,
+.facebookimage,
+.pedidosyaimage,
+.whatsappimage {
+  height: 25px;
+  padding: 10px;
+}
+
+.vulcanicalogo {
+  position: absolute;
+  right: 0px;
+  width: 200px;
+  padding: 30px;
+}
+
+.links {
+  text-decoration: none;
+  color: #f2eee3;
+}
+
+.pizza_photo_menu {
+  height: 240px;
+  width: 240px;
+  padding: 25px;
+  border-radius: 10%;
+  text-align: center;
+  float: left;
+}
+
+.menu_container {
+  display: inline-block;
+  top: 50%;
+  border-bottom: 5px solid black;
+  width: 100%;
+}
+
+.title_menu,
+.paragraph_menu {
+
+  padding: 10px;
+  margin: 10px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 20px;
+}
+
+.team {
+  display: inline-block;
+}
+
+.team_image {
+  height: 250px;
+  width: 250px;
+  padding: 20px;
+  border-radius: 100%;
+}
+
+.team_name,
+.team_description {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+}
+
+.team_name {
+  color: black;
+}
+
+.team_description {
+  color: gray;
+}
+
+
+
+
+
+@media screen and (max-width: 750px) {
+
+  .vulcanicalogo {
+    width: 200px;
+    padding: 30px;
+    display: inline-block;
+    bottom: 0px;
+    position: relative;
+  }
+
+}
+
+@media screen and (max-width: 950px) {
+
+  .profilepicture,
+  .description,
+  .pizzapicture {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .team_description,
+  .team_image,
+  .team_name,
+  .team {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+
